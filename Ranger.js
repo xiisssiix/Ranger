@@ -8,18 +8,21 @@ export default class Ranger {
     this.combatPower = 0;
   }
 
+
   transform() {
     this.isTransformed = true;
     console.log(`${this.name} transforms! Gao Access!! `);
   }
+
   rollCall() {
     this.hp += 500
     console.log(`I am the ${this.color} warrior! My buff Hp + ${this.hp} `);
   }
 
-  eat() {
+  eat(){
     this.hp += 20;
     console.log(`${this.name} eats. HP: ${this.hp}`);
+  }
 
   callAnimalSpirit() {
     if (this.isTransformed) {
@@ -30,10 +33,11 @@ export default class Ranger {
       console.log(`${this.name}  needs to transform first!`);
     }
   }
+
   static teamUp(ranger1, ranger2) {
     console.log(`${ranger1.name} and ${ranger2.name} team up to fight evil!`);
   }
-  }
+  
   combat(enemy){ 
     if (this.combatPower > enemy.combatPower){
       console.log("Victory")
