@@ -1,4 +1,3 @@
-
 export default class Ranger {
   constructor(name, color, animalSpirit) {
     this.name = name;
@@ -6,6 +5,7 @@ export default class Ranger {
     this.animalSpirit = animalSpirit;
     this.hp = 100;
     this.isTransformed = false;
+    this.combatPower = 0;
   }
 
   transform() {
@@ -19,18 +19,27 @@ export default class Ranger {
 
   callAnimalSpirit() {
     if (this.isTransformed) {
-      console.log(`${this.name} calls upon the power of the ${this.animalSpirit}!`);
+      console.log(
+        `${this.name} calls upon the power of the ${this.animalSpirit}!`,
+      );
     } else {
       console.log(`${this.name} needs to transform first!`);
     }
-}
-   static teamUp(ranger1, ranger2) {
+  }
+  static teamUp(ranger1, ranger2) {
     console.log(`${ranger1.name} and ${ranger2.name} team up to fight evil!`);
   }
-  eat () {
-    this.hp += 20;  
+  eat() {
+    this.hp += 20;
     console.log(`${this.name} eats and restores health. HP is now ${this.hp}`);
   }
+  combat(enemy){ 
+    if (this.combatPower > enemy.combatPower){
+      console.log("Victory")
+    }
+    else{
+      console.log("Defeat")
+    } 
+  }
 }
-
 
