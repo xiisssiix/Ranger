@@ -3,6 +3,7 @@ import Rainbow from './Rainbow.js';
 import Gaored from "./gaored.js";
 import Orange from './Gaoorange.js';
 import Ranger from "./Ranger.js";
+import Gaoblue from "./Gaoblue.js";
 
 
 
@@ -41,7 +42,19 @@ vanDarkFong.shout();
 vanDarkFong.callAnimalSpirit();
 */
 
+const kai = new Gaoblue("Kai Samezu", "blue", "Shark");
 
+// 1. ลองตะโกนตอนยังไม่แปลงร่าง
+kai.shout(); 
+// Output: "Kai Samezu : ผมเป็น Dev Kai Samezu"
+
+// 2. ทำการแปลงร่าง (Gao Access!!)
+kai.transform(); 
+// Output: "Kai Samezu transforms! Gao Access!!"
+
+// 3. ตะโกนอีกรอบหลังแปลงร่างแล้ว
+kai.shout(); 
+// Output: "blue : ฉลามแห่งคลื่นคลั่ง!!! blue"
 
 
 
